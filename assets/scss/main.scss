@@ -41,15 +41,25 @@
   @media (max-width: 767px) {
     font-size: 18px;
   }
+
+  &:hover {
+    background-color: rgb(185, 201, 45);
+    box-shadow: 3px 3px rgba(0, 0, 0, 0.4);
+    transition: 0.4s ease-out;
+  }
 }
 
 .img {
   max-width: 100%;
 }
 
+p {
+  color: white;
+}
+
 section {
   h2 {
-    color: rgb(143, 33, 33);
+    color: #fff;
     text-align: center;
     margin-bottom: 32px;
     text-transform: uppercase;
@@ -98,6 +108,7 @@ header {
         color: inherit;
         font-size: 20px;
         text-decoration: none;
+        font-weight: 600;
       }
     }
   }
@@ -106,7 +117,7 @@ header {
     background-color: #12002f;
     .container {
       padding-top: 16px;
-      padding-bottom: 16px;
+      padding-bottom: 10px;
     }
   }
 }
@@ -114,8 +125,8 @@ header {
 main {
   section.banner {
     color: white;
+    min-height: 100vh;
     position: relative;
-    min-height: 80vh;
     display: flex;
     align-items: center;
 
@@ -133,7 +144,7 @@ main {
       bottom: 0;
       z-index: 0;
       background-color: #12002f;
-      opacity: 0.6;
+      opacity: 0.4;
     }
     .container {
       position: relative;
@@ -163,13 +174,75 @@ main {
       }
     }
   }
-  .references {
+
+  .what-is {
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    background-image: url("../img/backgroundCyberPunk.jpg");
+    background-position: top right;
+    background-size: cover;
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 0;
+      background-color: #12002f;
+      opacity: 0.5;
+    }
     .container {
       padding-top: 64px;
       padding-bottom: 64px;
-      background-image: url("../img/CyberPunk2077.jpg");
-      background-position: center right;
-      background-size: cover;
+      z-index: 1;
+      .content {
+        
+        padding-left: 12px;
+        padding-right: 12px;
+        padding-top: 15px;
+        padding-bottom: 20px;
+        p {
+          font-size: 23px;
+          font-weight: 600;
+          @media (max-width: 764px) {
+            font-size: 23px;
+          }
+        }
+      }
+    }
+  }
+  .references {
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    background-image: url("../img/CyberPunk2077.jpg");
+    background-position: top right;
+    background-size: cover;
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 0;
+      background-color: #12002f;
+      opacity: 0.5;
+    }
+    .container {
+      padding-top: 64px;
+      padding-bottom: 64px;
+      z-index: 1;
       .references-grid {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
@@ -183,7 +256,7 @@ main {
           grid-template-columns: repeat(1, 1fr);
         }
         .reference {
-          background-color: white;
+          background-color: #fff;
           border-radius: 16px;
           overflow: hidden;
           box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
@@ -194,12 +267,15 @@ main {
             .img {
               display: block;
               width: 100%;
-              height: 128px;
+              height: 200px;
               object-fit: cover;
             }
           }
           .content {
             padding: 16px;
+            p {
+              color: #000;
+            }
           }
         }
       }
@@ -209,6 +285,10 @@ main {
   .characteristics {
     padding-top: 64px;
     padding-bottom: 64px;
+
+    background-image: url("../img/cyberpunkStyle1.jpg");
+    background-position: center right;
+    background-size: cover;
 
     .characteristics-grid {
       display: grid;
@@ -220,17 +300,17 @@ main {
         grid-template-columns: repeat(1, 1fr);
       }
       .characteristic {
-        background-image: url("../img/cyberpunkStyle1.jpg");
+        background-image: url("../img/backgroundCityDream.jpg");
         width: 100%;
         background-size: cover;
         border-radius: 16px;
         overflow: hidden;
         .content {
           opacity: 0;
-          color: white;
           padding: 16px;
           background-color: rgba(64, 39, 68, 0.6);
           h3 {
+            color: #fff;
             font-size: 32px;
             margin-bottom: 16px;
             @media (max-width: 1024px) {
