@@ -67,7 +67,7 @@ header {
   right: 0;
   width: 100%;
   z-index: 99;
-  
+
   .container {
     padding-top: 32px;
     padding-bottom: 32px;
@@ -102,9 +102,9 @@ header {
     }
   }
 
-  &.is-scrolling{
+  &.is-scrolling {
     background-color: #12002f;
-    .container{
+    .container {
       padding-top: 16px;
       padding-bottom: 16px;
     }
@@ -164,13 +164,12 @@ main {
     }
   }
   .references {
-    background-image: url("../img/dreamCyber.jpg");
-    background-position: center right;
-    background-size: cover;
     .container {
       padding-top: 64px;
       padding-bottom: 64px;
-
+      background-image: url("../img/CyberPunk2077.jpg");
+      background-position: center right;
+      background-size: cover;
       .references-grid {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
