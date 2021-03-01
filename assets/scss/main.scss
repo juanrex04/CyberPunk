@@ -37,6 +37,10 @@
   text-decoration: none;
   text-transform: uppercase;
   font-weight: 700;
+
+  @media (max-width: 767px) {
+    font-size: 18px;
+  }
 }
 
 .img {
@@ -51,7 +55,7 @@ section {
     text-transform: uppercase;
     font-size: 36px;
     @media (max-width: 767px) {
-      font-size: 25px;
+      font-size: 30px;
     }
   }
 }
@@ -62,8 +66,8 @@ header {
   left: 0;
   right: 0;
   width: 100%;
-  z-index: 1;
-  //background-color: #12002f;
+  z-index: 99;
+  
   .container {
     padding-top: 32px;
     padding-bottom: 32px;
@@ -97,17 +101,26 @@ header {
       }
     }
   }
+
+  &.is-scrolling{
+    background-color: #12002f;
+    .container{
+      padding-top: 16px;
+      padding-bottom: 16px;
+    }
+  }
 }
 
 main {
-  .banner {
+  section.banner {
     color: white;
     position: relative;
     min-height: 80vh;
     display: flex;
     align-items: center;
+
     background-image: url("../img/bladeRunner.jpeg");
-    background-position: center;
+    background-position: top right;
     background-size: cover;
 
     &::after {
@@ -133,6 +146,7 @@ main {
           color: #ff9fdb;
           text-transform: uppercase;
         }
+
         @media (max-width: 767px) {
           font-size: 30px;
         }
@@ -141,11 +155,10 @@ main {
         color: inherit;
         font-size: 30px;
         font-weight: 400;
-        margin-bottom: 15px;
         text-align: left;
 
         @media (max-width: 767px) {
-          font-size: 20px;
+          font-size: 25px;
         }
       }
     }
@@ -165,6 +178,10 @@ main {
 
         @media (max-width: 1024px) {
           grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media (max-width: 767px) {
+          grid-template-columns: repeat(1, 1fr);
         }
         .reference {
           background-color: white;
@@ -201,7 +218,7 @@ main {
       margin-bottom: 32px;
 
       @media (max-width: 768px) {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(1, 1fr);
       }
       .characteristic {
         background-image: url("../img/cyberpunkStyle1.jpg");
